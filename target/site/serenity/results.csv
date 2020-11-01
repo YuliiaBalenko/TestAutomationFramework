@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Lookup a definition","Looking up the definition of '<test>'","ERROR","2020-10-28T22:23:15.122513+02:00[Europe/Kiev]","0.0","17.2"
+"Lookup a definition","Looking up the definition of 'apple'","SUCCESS","2020-11-01T13:12:44.34655+02:00[Europe/Kiev]","0.0","7.87"
+"Lookup a definition","Looking up the definition of 'pear'","SUCCESS","2020-11-01T13:13:02.018531+02:00[Europe/Kiev]","0.0","6.69"
+"Lookup a definition","Looking up the definition of '<word>'","SUCCESS","2020-11-01T13:13:08.792812+02:00[Europe/Kiev]","0.0","12.62"

@@ -1,0 +1,82 @@
+<story path="stories/consult_dictionary/LookupADefinition.story" title="Lookup a definition">
+<narrative keyword="Narrative:">
+  <inOrderTo keyword="In order to">talk better</inOrderTo>
+  <asA keyword="As a">n English student</asA>
+  <iWantTo keyword="I want to">look up word definitions</iWantTo>
+</narrative>
+<scenario keyword="Scenario:" title="Looking up the definition of &apos;apple&apos;">
+<step outcome="successful">Given the user is on the Wikionary home page</step>
+<step outcome="successful">When the user looks up the definition of the word &apos;apple&apos;</step>
+<step outcome="successful">Then they should see the definition &apos;A common, round fruit produced by the tree Malus domestica, cultivated in temperate climates.&apos;</step>
+</scenario>
+<scenario keyword="Scenario:" title="Looking up the definition of &apos;&lt;word&gt;&apos;">
+<step outcome="successful">Given the user is on the Wikionary home page</step>
+<step outcome="successful">When the user looks up the definition of the word:
+<parameter><parameters>
+<names><name>word</name></names>
+<values><value>watermelon</value></values>
+<values><value>papaya</value></values>
+</parameters>
+</parameter></step>
+<step outcome="failed" keyword="FAILED">Then they should see the definition:
+<parameter><parameters>
+<names><name>definition</name></names>
+<values><value>The fruit of the watermelon plant, having a green rind and watery flesh that is typically bright red when ripe and contains black pips.</value></values>
+<values><value>A tropical American evergreen tree, Carica papaya, having large, yellow, edible fruit</value></values>
+</parameters>
+</parameter><failure>java.lang.AssertionError: 
+Expected: a collection containing a string containing &quot;The fruit of the watermelon plant, having a green rind and watery flesh that is typically bright red when ripe and contains black pips.&quot;
+     but: was &quot;A tropical American evergreen tree, Carica papaya, having large, yellow, edible fruit&quot;, was &quot;The fruit of this tree.&quot;, was &quot;An orange colour, like that of papaya flesh.
+papaya:  &quot;</failure></step>
+<failure>java.lang.AssertionError: 
+Expected: a collection containing a string containing &quot;The fruit of the watermelon plant, having a green rind and watery flesh that is typically bright red when ripe and contains black pips.&quot;
+     but: was &quot;A tropical American evergreen tree, Carica papaya, having large, yellow, edible fruit&quot;, was &quot;The fruit of this tree.&quot;, was &quot;An orange colour, like that of papaya flesh.
+papaya:  &quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at com.epam.steps.serenity.EndUserSteps.should_see_definition(EndUserSteps.java:28)
+	at com.epam.steps.serenity.EndUserSteps$ByteBuddy$kLA9JgBZ.should_see_definition$accessor$AyqEwWvm(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:492)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:472)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:445)
+	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:201)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:188)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:76)
+	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
+	at com.epam.steps.serenity.EndUserSteps$ByteBuddy$kLA9JgBZ.should_see_definition(Unknown Source)
+	at com.epam.steps.DefinitionSteps.thenTheyShouldSeeATableDefinitionContainingTheWords(DefinitionSteps.java:43)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.jbehave.core.steps.StepCreator$ParametrisedStep.perform(StepCreator.java:790)
+	at org.jbehave.core.embedder.PerformableTree$FineSoFar.run(PerformableTree.java:349)
+...</failure>
+</scenario>
+<scenario keyword="Scenario:" title="Looking up the definition of &apos;&lt;word&gt;&apos;">
+<examples keyword="Examples:">
+<step>Given the user is on the Wikionary home page</step>
+<step>When the user looks up the definition of the word &apos;&lt;word&gt;&apos;</step>
+<step>Then they should see the definition &apos;&lt;definition&gt;&apos;</step>
+<parameters>
+<names><name>word</name><name>definition</name></names>
+<values><value>banana</value><value>An elongated curved tropical fruit that grows in bunches and has a creamy flesh and a smooth skin.</value></values>
+<values><value>lemon</value><value>A yellowish citrus fruit.</value></values>
+</parameters>
+
+<example keyword="Example:">{word=banana, definition=An elongated curved tropical fruit that grows in bunches and has a creamy flesh and a smooth skin.}</example>
+<step outcome="successful">Given the user is on the Wikionary home page</step>
+<step outcome="successful">When the user looks up the definition of the word &apos;<parameter>banana</parameter>&apos;</step>
+<step outcome="successful">Then they should see the definition &apos;<parameter>An elongated curved tropical fruit that grows in bunches and has a creamy flesh and a smooth skin.</parameter>&apos;</step>
+
+<example keyword="Example:">{word=lemon, definition=A yellowish citrus fruit.}</example>
+<step outcome="successful">Given the user is on the Wikionary home page</step>
+<step outcome="successful">When the user looks up the definition of the word &apos;<parameter>lemon</parameter>&apos;</step>
+<step outcome="successful">Then they should see the definition &apos;<parameter>A yellowish citrus fruit.</parameter>&apos;</step>
+</examples>
+</scenario>
+</story>

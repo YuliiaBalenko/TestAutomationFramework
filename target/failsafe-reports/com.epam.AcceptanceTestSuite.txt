@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.epam.AcceptanceTestSuite
+-------------------------------------------------------------------------------
+Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 42.707 s - in com.epam.AcceptanceTestSuite
