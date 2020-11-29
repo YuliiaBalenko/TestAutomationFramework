@@ -1,4 +1,4 @@
 /Users/yuliiabalenko/AQA/projects/serenity-automation-mentoring/src/test/java/com/epam/AcceptanceTestSuite.java
 /Users/yuliiabalenko/AQA/projects/serenity-automation-mentoring/src/test/java/com/epam/steps/serenity/EndUserSteps.java
-/Users/yuliiabalenko/AQA/projects/serenity-automation-mentoring/src/test/java/com/epam/steps/DefinitionSteps.java
-/Users/yuliiabalenko/AQA/projects/serenity-automation-mentoring/src/test/java/com/epam/pages/DictionaryPage.java
+/Users/yuliiabalenko/AQA/projects/serenity-automation-mentoring/src/test/java/com/epam/steps/DefinitionStepsForPetStoreOrder.java
+/Users/yuliiabalenko/AQA/projects/serenity-automation-mentoring/src/test/java/com/epam/EnvironmentPropertyLoader.java

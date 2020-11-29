@@ -1,4 +1,3 @@
 com/epam/steps/serenity/EndUserSteps.class
 com/epam/AcceptanceTestSuite.class
-com/epam/steps/DefinitionSteps.class
-com/epam/pages/DictionaryPage.class
+com/epam/EnvironmentPropertyLoader.class

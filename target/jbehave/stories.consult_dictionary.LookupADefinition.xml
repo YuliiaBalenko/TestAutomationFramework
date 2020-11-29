@@ -34,8 +34,8 @@ Expected: a collection containing a string containing &quot;The fruit of the wat
 papaya:  &quot;
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
-	at com.epam.steps.serenity.EndUserSteps.should_see_definition(EndUserSteps.java:28)
-	at com.epam.steps.serenity.EndUserSteps$ByteBuddy$kLA9JgBZ.should_see_definition$accessor$AyqEwWvm(Unknown Source)
+	at serenity.automation.mentoring@1.0-SNAPSHOT/com.epam.steps.serenity.EndUserSteps.should_see_definition(EndUserSteps.java:28)
+	at serenity.automation.mentoring@1.0-SNAPSHOT/com.epam.steps.serenity.EndUserSteps$ByteBuddy$fgA4R5U8.should_see_definition$accessor$nfhdNtK9(Unknown Source)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -47,8 +47,8 @@ papaya:  &quot;
 	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:188)
 	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:76)
 	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at com.epam.steps.serenity.EndUserSteps$ByteBuddy$kLA9JgBZ.should_see_definition(Unknown Source)
-	at com.epam.steps.DefinitionSteps.thenTheyShouldSeeATableDefinitionContainingTheWords(DefinitionSteps.java:43)
+	at serenity.automation.mentoring@1.0-SNAPSHOT/com.epam.steps.serenity.EndUserSteps$ByteBuddy$fgA4R5U8.should_see_definition(Unknown Source)
+	at serenity.automation.mentoring@1.0-SNAPSHOT/com.epam.steps.DefinitionSteps.thenTheyShouldSeeATableDefinitionContainingTheWords(DefinitionSteps.java:39)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -56,6 +56,14 @@ papaya:  &quot;
 	at org.jbehave.core.steps.StepCreator$ParametrisedStep.perform(StepCreator.java:790)
 	at org.jbehave.core.embedder.PerformableTree$FineSoFar.run(PerformableTree.java:349)
 ...</failure>
+</scenario>
+<scenario keyword="Scenario:" title="Looking up the definition of &apos;pear&apos;">
+<meta>
+<property keyword="@" name="ignored" value=""/>
+</meta>
+<step outcome="successful">Given the user is on the Wikionary home page</step>
+<step outcome="successful">When the user looks up the definition of the word &apos;pear&apos;</step>
+<step outcome="successful">Then they should see the definition &apos;An edible fruit produced by the pear tree, similar to an apple but elongated towards the stem.&apos;</step>
 </scenario>
 <scenario keyword="Scenario:" title="Looking up the definition of &apos;&lt;word&gt;&apos;">
 <examples keyword="Examples:">

@@ -1,43 +1,77 @@
 package com.epam.steps.serenity;
 
-import com.epam.pages.DictionaryPage;
+import config.Config;
+import endpoints.PetStorePetEndpoint;
+import io.restassured.http.ContentType;
+import io.restassured.mapper.ObjectMapperType;
+import models.PetStoreOrder;
 import net.thucydides.core.annotations.Step;
-import net.thucydides.core.steps.ScenarioSteps;
-import org.jbehave.core.model.ExamplesTable;
+import testData.PetStoreTestData;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.containsString;
-import static org.hamcrest.Matchers.hasItem;
 
 public class EndUserSteps {
 
-    DictionaryPage dictionaryPage;
+    PetStorePetEndpoint petStorePetEndpoint = new PetStorePetEndpoint();
+    PetStoreTestData petStoreTestData = new PetStoreTestData();
 
     @Step
-    public void enters(String keyword) {
-        dictionaryPage.enter_keywords(keyword);
+    public PetStoreOrder getPetOrder(String baseUrl) {
+
+        PetStoreOrder petStoreOrder = petStorePetEndpoint.getPetOrderByOrderId(petStoreTestData.getPetStoreOrder().getId(),baseUrl)
+                .then()
+                .statusCode(200)
+                .and()
+                .extract().response().body().as(PetStoreOrder.class, ObjectMapperType.JACKSON_2);
+
+        return petStoreOrder;
     }
 
     @Step
-    public void starts_search() {
-        dictionaryPage.lookup_terms();
+    public void postPet(String baseUrl) {
+        petStorePetEndpoint.given(baseUrl)
+                .body(petStoreTestData.createTestPetObject())
+                .contentType(ContentType.JSON)
+                .when()
+                .post(Config.CREATE_PET)
+                .then()
+                .statusCode(200);
     }
 
     @Step
-    public void should_see_definition(String definition) {
-        assertThat(dictionaryPage.getDefinitions(), hasItem(containsString(definition)));
+    public void postPetOrder(String baseUrl) {
+        PetStoreOrder petStoreOrder = petStoreTestData.createTestPetOrderObject();
+        petStorePetEndpoint.given(baseUrl)
+                .body(petStoreOrder)
+                .contentType(ContentType.JSON)
+                .when()
+                .post(Config.CREATE_ORDER)
+                .then()
+                .statusCode(200);
     }
 
     @Step
-    public void is_the_home_page() {
-        dictionaryPage.open();
+    public void deletePetOrder(String baseUrl) {
+        petStorePetEndpoint.given(baseUrl)
+                .baseUri(baseUrl)
+                .when()
+                .delete(String.format(Config.ORDER_BY_ID, petStoreTestData.getPetStoreOrder().getId()))
+                .then()
+                .statusCode(200);
     }
 
     @Step
-    public void looks_for(String term) {
-        enters(term);
-        starts_search();
+    public void deletePet(String baseUrl) {
+        petStorePetEndpoint.given(baseUrl)
+                .baseUri(baseUrl)
+                .when()
+                .delete(String.format(Config.DELETE_PET, petStoreTestData.getPet().getId()))
+                .then()
+                .statusCode(200);
     }
 
+    @Step
+    public PetStoreOrder getTestPetOrder() {
+        return petStoreTestData.getPetStoreOrder();
+    }
 
 }
