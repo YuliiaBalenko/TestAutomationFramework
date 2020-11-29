@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>stories.pet_store.PetOrder</title>
+<style type="text/css" media="all">
+@import url( "./style/jbehave-core.css" );
+</style>
+</head>
+<body>
+ 
+<script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+<story path="stories/pet_store/PetOrder.story" title="">
+<narrative keyword="Narrative:">
+  <inOrderTo keyword="As a">user</inOrderTo>
+  <asA keyword="I want to">add pet order</asA>
+  <iWantTo keyword="So that">I can achieve a business goal</iWantTo>
+</narrative>
+<scenario keyword="Scenario:" title="test pet order">
+<step outcome="failed" keyword="FAILED">Given the valid Pet<failure>net.serenitybdd.core.exceptions.SerenityManagedException: Could not initialize class org.codehaus.groovy.vmplugin.v7.Java7</failure></step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">When I create order for pet</step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">Then the order is saved on server</step>
+<step outcome="failed" keyword="FAILED">com.epam.steps.DefinitionStepsForPetStoreOrder.deletePetAndPetOrder()<failure>org.jbehave.core.failures.BeforeOrAfterFailed: Method deletePetAndPetOrder (annotated with @AfterScenario in class com.epam.steps.DefinitionStepsForPetStoreOrder) failed: net.serenitybdd.core.exceptions.SerenityManagedException: Could not initialize class io.restassured.RestAssured</failure></step>
+<step outcome="failed" keyword="FAILED">com.epam.steps.DefinitionStepsForPetStoreOrder.deletePetAndPetOrder()<failure>org.jbehave.core.failures.BeforeOrAfterFailed: Method deletePetAndPetOrder (annotated with @AfterScenario in class com.epam.steps.DefinitionStepsForPetStoreOrder) failed: net.serenitybdd.core.exceptions.SerenityManagedException: Could not initialize class io.restassured.RestAssured</failure></step>
+<failure>org.jbehave.core.failures.BeforeOrAfterFailed: Method deletePetAndPetOrder (annotated with @AfterScenario in class com.epam.steps.DefinitionStepsForPetStoreOrder) failed: net.serenitybdd.core.exceptions.SerenityManagedException: Could not initialize class io.restassured.RestAssured
+	at org.jbehave.core.steps.StepCreator$BeforeOrAfterStep.perform(StepCreator.java:679)
+	at org.jbehave.core.steps.StepCreator$DelegatingStep.perform(StepCreator.java:645)
+	at org.jbehave.core.steps.StepCreator$UponAnyStep.doNotPerform(StepCreator.java:729)
+	at org.jbehave.core.embedder.PerformableTree$SomethingHappened.run(PerformableTree.java:372)
+...</failure>
+</scenario>
+</story>
+
+]]></script>
+</body>
+<!--  SyntaxHighlighter resources:  should be included at end of body -->
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shCore.css"/>
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shThemeRDark.css"/>
+<script language="javascript" src="./js/sh-3.0.83/shCore.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushBash.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushCss.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushDiff.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushGroovy.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJava.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJScript.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPlain.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPython.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushRuby.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushScala.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushXml.js"></script>
+<script language="javascript" src="./js/shBrushBdd.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;    
+    SyntaxHighlighter.all();
+</script>
+</html>
