@@ -1,13 +1,5 @@
 package models;
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
-//import serializers.DateTimeDeserializer;
-//import serializers.DateTimeSerializer;
-
-import java.time.LocalDateTime;
-import java.util.Objects;
-
 public class PetStoreOrder {
     private long id;
     private long petId;
