@@ -5,16 +5,26 @@
   <iWantTo keyword="So that">I can achieve a business goal</iWantTo>
 </narrative>
 <scenario keyword="Scenario:" title="test pet order">
-<step outcome="failed" keyword="FAILED">Given the valid Pet<failure>net.serenitybdd.core.exceptions.SerenityManagedException: Could not initialize class org.codehaus.groovy.vmplugin.v7.Java7</failure></step>
-<step outcome="notPerformed" keyword="NOT PERFORMED">When I create order for pet</step>
-<step outcome="notPerformed" keyword="NOT PERFORMED">Then the order is saved on server</step>
-<step outcome="failed" keyword="FAILED">com.epam.steps.DefinitionStepsForPetStoreOrder.deletePetAndPetOrder()<failure>org.jbehave.core.failures.BeforeOrAfterFailed: Method deletePetAndPetOrder (annotated with @AfterScenario in class com.epam.steps.DefinitionStepsForPetStoreOrder) failed: net.serenitybdd.core.exceptions.SerenityManagedException: Could not initialize class io.restassured.RestAssured</failure></step>
-<step outcome="failed" keyword="FAILED">com.epam.steps.DefinitionStepsForPetStoreOrder.deletePetAndPetOrder()<failure>org.jbehave.core.failures.BeforeOrAfterFailed: Method deletePetAndPetOrder (annotated with @AfterScenario in class com.epam.steps.DefinitionStepsForPetStoreOrder) failed: net.serenitybdd.core.exceptions.SerenityManagedException: Could not initialize class io.restassured.RestAssured</failure></step>
-<failure>org.jbehave.core.failures.BeforeOrAfterFailed: Method deletePetAndPetOrder (annotated with @AfterScenario in class com.epam.steps.DefinitionStepsForPetStoreOrder) failed: net.serenitybdd.core.exceptions.SerenityManagedException: Could not initialize class io.restassured.RestAssured
-	at org.jbehave.core.steps.StepCreator$BeforeOrAfterStep.perform(StepCreator.java:679)
-	at org.jbehave.core.steps.StepCreator$DelegatingStep.perform(StepCreator.java:645)
-	at org.jbehave.core.steps.StepCreator$UponAnyStep.doNotPerform(StepCreator.java:729)
-	at org.jbehave.core.embedder.PerformableTree$SomethingHappened.run(PerformableTree.java:372)
-...</failure>
+<step outcome="pending" keyword="PENDING">Given the valid Pet</step>
+<step outcome="pending" keyword="PENDING">When I create order for pet</step>
+<step outcome="pending" keyword="PENDING">Then the order is saved on server</step>
+<pendingMethod>@Given(&quot;the valid Pet&quot;)
+@Pending
+public void givenTheValidPet() {
+  // PENDING
+}
+</pendingMethod>
+<pendingMethod>@When(&quot;I create order for pet&quot;)
+@Pending
+public void whenICreateOrderForPet() {
+  // PENDING
+}
+</pendingMethod>
+<pendingMethod>@Then(&quot;the order is saved on server&quot;)
+@Pending
+public void thenTheOrderIsSavedOnServer() {
+  // PENDING
+}
+</pendingMethod>
 </scenario>
 </story>

@@ -1,5 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Pet order" skipped="0" tests="1" time="0.36" timestamp="2020-11-29 08:47:28"><testcase name="test pet order"><error message="Could not initialize class io.restassured.RestAssured" type="java.lang.NoClassDefFoundError">Could not initialize class io.restassured.RestAssured</error><system-err>Could not initialize class io.restassured.RestAssured
-serenity.automation.mentoring@1.0-SNAPSHOT/endpoints.PetStorePetEndpoint.given(PetStorePetEndpoint.java:16)
-serenity.automation.mentoring@1.0-SNAPSHOT/com.epam.steps.serenity.EndUserSteps.deletePetOrder(EndUserSteps.java:54)
-serenity.automation.mentoring@1.0-SNAPSHOT/com.epam.steps.DefinitionStepsForPetStoreOrder.deletePetAndPetOrder(DefinitionStepsForPetStoreOrder.java:46)
-</system-err></testcase></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Pet order" skipped="1" tests="1" time="0.08" timestamp="2020-12-01 09:15:36"><testcase name="test pet order"><skipped/></testcase></testsuite>

@@ -152,7 +152,7 @@
             <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="fa fa-comments-o"></i> Stories</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 29-11-2020 20:47</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 01-12-2020 09:15</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -182,9 +182,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='far fa-stop-circle pending-icon fa-2x' title='PENDING'></i></a></span>
                             <span class="test-case-title">
-                                <span class="error-color">
+                                <span class="pending-color">
                                     test pet order
                                         <span class="related-issue-title"></span>
                                 </span>
@@ -223,109 +223,40 @@
                     <td colspan="5"></td>
                 </tr>
 
-                    <tr class="test-ERROR">
+                    <tr class="test-PENDING">
 
                         <td width="50" class="step-icon">
                             <a name="0"></a>
-                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
-                                   style="display:block">
-                                    <i class="fa fa-plus-square-o imgstepSection0 error-icon"
-                                       style="margin-left: 20px; float:left; padding-right:5px"></i>
-                                </a>
+                                <span style="margin-left: 20px;"
+                                      class="top-level-icon"><a href='##beforetable'><i class='far fa-stop-circle pending-icon ' title='PENDING'></i></a>
+                                </span>
                         </td>
 
                         <td class="step-description-column">
                             <div class="step-description">
-                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
-                                   style="display:block;">
                                     <span class="top-level-step">
-                                                com.epam.steps.DefinitionStepsForPetStoreOrder.deletePetAndPetOrder()
-                                        </span>
-                                </a>
-                                <span class="evidence">
-                                </span>
-                            </div>
-                        </td>
-
-                        <td width="130"><span class="top-level-step">ERROR</span></td>
-                        <td width="100"><span class="top-level-step">0.31s</span></td>
-                    </tr>
-                        <tr>
-                            <td colspan="5">
-                                <table id="stepSection0" class="step-table-nested" style="display:none;">
-
-                    <tr class="test-ERROR">
-
-                        <td width="70" class="step-icon">
-                            <a name="0-0"></a>
-                                <span style="margin-left: 40px;"
-                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></a>
-                                </span>
-                        </td>
-
-                        <td class="step-description-column">
-                            <div class="step-description">
-                                    <span class="nested-group-step">
-                                                Post pet: &lt;null&gt;
+                                                Given the valid Pet
                                         </span>
                                 <span class="evidence">
                                 </span>
                             </div>
                         </td>
 
-                        <td width="130"><span class="nested-group-step">ERROR</span></td>
-                        <td width="100"><span class="nested-group-step">0.05s</span></td>
+                        <td width="130"><span class="top-level-step">PENDING</span></td>
+                        <td width="100"><span class="top-level-step">0s</span></td>
                     </tr>
-                        <tr class="test-ERROR">
-                            <td width="40">&nbsp</td>
-                            <td width="%" colspan="3" class="error-message-cell">
+                    <tr class="test-PENDING">
 
-
-    <div style="display:block">
-        <div class="table">
-            <div class="row">
-                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">java.lang.NoClassDefFoundError: Could not initialize class org.codehaus.groovy.vmplugin.v7.Java7</span>
-                </div>
-                <div class="col-sm-2">
-                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-2""
-                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
-                </div>
-             </div>
-        </div>
-    <div>
-
-    <!-- Details Section -->
-    <div class="row stacktrace-details">
-      <div class="col">
-        <div class="collapse multi-collapse" id="stacktraceModal-2">
-            <div class="card">
-                <div class="card-header">
-                    <h4>java.lang.NoClassDefFoundError </h4>
-                </div>
-                <div class="card-body">
-                    <div>
-                        <pre>io.restassured.authentication.NoAuthScheme.$getStaticMetaClass(NoAuthScheme.groovy:-1)<br />io.restassured.authentication.NoAuthScheme.<init>(NoAuthScheme.groovy:-1)<br />io.restassured.RestAssured.<clinit>(RestAssured.java:354)<br />endpoints.PetStorePetEndpoint.given(PetStorePetEndpoint.java:16)<br />com.epam.steps.serenity.EndUserSteps.postPet(EndUserSteps.java:31)<br />com.epam.steps.DefinitionStepsForPetStoreOrder.createPet(DefinitionStepsForPetStoreOrder.java:29)<br /></pre>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-                            </td>
-                        </tr>
-                    <tr class="test-SKIPPED">
-
-                        <td width="70" class="step-icon">
-                            <a name="0-1"></a>
-                                <span style="margin-left: 40px;"
-                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></a>
+                        <td width="50" class="step-icon">
+                            <a name="1"></a>
+                                <span style="margin-left: 20px;"
+                                      class="top-level-icon"><a href='##beforetable'><i class='far fa-stop-circle pending-icon ' title='PENDING'></i></a>
                                 </span>
                         </td>
 
                         <td class="step-description-column">
                             <div class="step-description">
-                                    <span class="nested-group-step">
+                                    <span class="top-level-step">
                                                 When I create order for pet
                                         </span>
                                 <span class="evidence">
@@ -333,21 +264,21 @@
                             </div>
                         </td>
 
-                        <td width="130"><span class="nested-group-step">SKIPPED</span></td>
-                        <td width="100"><span class="nested-group-step">0s</span></td>
+                        <td width="130"><span class="top-level-step">PENDING</span></td>
+                        <td width="100"><span class="top-level-step">0s</span></td>
                     </tr>
-                    <tr class="test-SKIPPED">
+                    <tr class="test-PENDING">
 
-                        <td width="70" class="step-icon">
-                            <a name="0-2"></a>
-                                <span style="margin-left: 40px;"
-                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></a>
+                        <td width="50" class="step-icon">
+                            <a name="2"></a>
+                                <span style="margin-left: 20px;"
+                                      class="top-level-icon"><a href='##beforetable'><i class='far fa-stop-circle pending-icon ' title='PENDING'></i></a>
                                 </span>
                         </td>
 
                         <td class="step-description-column">
                             <div class="step-description">
-                                    <span class="nested-group-step">
+                                    <span class="top-level-step">
                                                 Then the order is saved on server
                                         </span>
                                 <span class="evidence">
@@ -355,197 +286,13 @@
                             </div>
                         </td>
 
-                        <td width="130"><span class="nested-group-step">SKIPPED</span></td>
-                        <td width="100"><span class="nested-group-step">0s</span></td>
-                    </tr>
-                    <tr class="test-ERROR">
-
-                        <td width="70" class="step-icon">
-                            <a name="0-3"></a>
-                                <span style="margin-left: 40px;"
-                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></a>
-                                </span>
-                        </td>
-
-                        <td class="step-description-column">
-                            <div class="step-description">
-                                    <span class="nested-group-step">
-                                                Delete pet order: &lt;null&gt;
-                                        </span>
-                                <span class="evidence">
-                                </span>
-                            </div>
-                        </td>
-
-                        <td width="130"><span class="nested-group-step">ERROR</span></td>
-                        <td width="100"><span class="nested-group-step">0s</span></td>
-                    </tr>
-                        <tr class="test-ERROR">
-                            <td width="40">&nbsp</td>
-                            <td width="%" colspan="3" class="error-message-cell">
-
-
-    <div style="display:block">
-        <div class="table">
-            <div class="row">
-                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">java.lang.NoClassDefFoundError: Could not initialize class io.restassured.RestAssured</span>
-                </div>
-                <div class="col-sm-2">
-                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-5""
-                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
-                </div>
-             </div>
-        </div>
-    <div>
-
-    <!-- Details Section -->
-    <div class="row stacktrace-details">
-      <div class="col">
-        <div class="collapse multi-collapse" id="stacktraceModal-5">
-            <div class="card">
-                <div class="card-header">
-                    <h4>java.lang.NoClassDefFoundError </h4>
-                </div>
-                <div class="card-body">
-                    <div>
-                        <pre>endpoints.PetStorePetEndpoint.given(PetStorePetEndpoint.java:16)<br />com.epam.steps.serenity.EndUserSteps.deletePetOrder(EndUserSteps.java:54)<br />com.epam.steps.DefinitionStepsForPetStoreOrder.deletePetAndPetOrder(DefinitionStepsForPetStoreOrder.java:46)<br /></pre>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-                            </td>
-                        </tr>
-
-                                </table>
-                            </td>
-                        </tr>
-                    <tr class="test-ERROR">
-
-                        <td width="50" class="step-icon">
-                            <a name="1"></a>
-                                <span style="margin-left: 20px;"
-                                      class="top-level-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></a>
-                                </span>
-                        </td>
-
-                        <td class="step-description-column">
-                            <div class="step-description">
-                                    <span class="top-level-step">
-                                                Delete pet order: &lt;null&gt;
-                                        </span>
-                                <span class="evidence">
-                                </span>
-                            </div>
-                        </td>
-
-                        <td width="130"><span class="top-level-step">ERROR</span></td>
+                        <td width="130"><span class="top-level-step">PENDING</span></td>
                         <td width="100"><span class="top-level-step">0s</span></td>
                     </tr>
-                        <tr class="test-ERROR">
-                            <td width="40">&nbsp</td>
-                            <td width="%" colspan="3" class="error-message-cell">
-
-
-    <div style="display:block">
-        <div class="table">
-            <div class="row">
-                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">java.lang.NoClassDefFoundError: Could not initialize class io.restassured.RestAssured</span>
-                </div>
-                <div class="col-sm-2">
-                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-6""
-                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
-                </div>
-             </div>
-        </div>
-    <div>
-
-    <!-- Details Section -->
-    <div class="row stacktrace-details">
-      <div class="col">
-        <div class="collapse multi-collapse" id="stacktraceModal-6">
-            <div class="card">
-                <div class="card-header">
-                    <h4>java.lang.NoClassDefFoundError </h4>
-                </div>
-                <div class="card-body">
-                    <div>
-                        <pre>endpoints.PetStorePetEndpoint.given(PetStorePetEndpoint.java:16)<br />com.epam.steps.serenity.EndUserSteps.deletePetOrder(EndUserSteps.java:54)<br />com.epam.steps.DefinitionStepsForPetStoreOrder.deletePetAndPetOrder(DefinitionStepsForPetStoreOrder.java:46)<br /></pre>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-                            </td>
-                        </tr>
-                    <tr class="test-ERROR">
-
-                        <td width="50" class="step-icon">
-                            <a name="2"></a>
-                                <span style="margin-left: 20px;"
-                                      class="top-level-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></a>
-                                </span>
-                        </td>
-
-                        <td class="step-description-column">
-                            <div class="step-description">
-                                    <span class="top-level-step">
-                                                com.epam.steps.DefinitionStepsForPetStoreOrder.deletePetAndPetOrder()
-                                        </span>
-                                <span class="evidence">
-                                </span>
-                            </div>
-                        </td>
-
-                        <td width="130"><span class="top-level-step">ERROR</span></td>
-                        <td width="100"><span class="top-level-step">0s</span></td>
-                    </tr>
-                        <tr class="test-ERROR">
-                            <td width="40">&nbsp</td>
-                            <td width="%" colspan="3" class="error-message-cell">
-
-
-    <div style="display:block">
-        <div class="table">
-            <div class="row">
-                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">java.lang.NoClassDefFoundError: Could not initialize class io.restassured.RestAssured</span>
-                </div>
-                <div class="col-sm-2">
-                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-7""
-                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
-                </div>
-             </div>
-        </div>
-    <div>
-
-    <!-- Details Section -->
-    <div class="row stacktrace-details">
-      <div class="col">
-        <div class="collapse multi-collapse" id="stacktraceModal-7">
-            <div class="card">
-                <div class="card-header">
-                    <h4>java.lang.NoClassDefFoundError </h4>
-                </div>
-                <div class="card-body">
-                    <div>
-                        <pre>endpoints.PetStorePetEndpoint.given(PetStorePetEndpoint.java:16)<br />com.epam.steps.serenity.EndUserSteps.deletePetOrder(EndUserSteps.java:54)<br />com.epam.steps.DefinitionStepsForPetStoreOrder.deletePetAndPetOrder(DefinitionStepsForPetStoreOrder.java:46)<br /></pre>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-                            </td>
-                        </tr>
-                <tr class="test-ERROR">
+                <tr class="test-PENDING">
                         <td colspan="2"></td>
-                    <td width="130"><span class="top-level-step"><em>ERROR</em></span></td>
-                    <td width="100"><span class="top-level-step"><em>0.36s</em></span></td>
+                    <td width="130"><span class="top-level-step"><em>PENDING</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>0.08s</em></span></td>
                 </tr>
 
             </table>
